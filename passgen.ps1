@@ -3,7 +3,7 @@
     SCRIPT 02: Generate Passwords: By Chase Lucas
 
     .EXAMPLE
-    ./genpass.ps1 -length 10 -user calucas
+    ./genpass.ps1 -length 10 -Lowercase -Specialchars
     
     .DESCRIPTION
     Allows the user to enter in several different criteria to customize their passwords by.  Users may specify how many
@@ -12,7 +12,7 @@
     etc.
 #>
 param(
-[Parameter(mandatory=$false)][int]$Length = 8,
+[Parameter(mandatory=$true)][int]$Length = 8,
 [Parameter(mandatory=$false)][switch]$Lowercase,
 [Parameter(mandatory=$false)][switch]$Uppercase,
 [Parameter(mandatory=$false)][switch]$Numbers,
